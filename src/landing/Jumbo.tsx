@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 import CloudsImg from '../assets/img/bg.svg';
 import BackgroundImg from '../assets/mg.svg';

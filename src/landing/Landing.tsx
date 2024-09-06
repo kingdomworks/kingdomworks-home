@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import About from './About';
 import Jumbo from './Jumbo';
 import Contact from './Contact';

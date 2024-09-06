@@ -34,7 +34,6 @@ jobs:
       - uses: actions/setup-node@v4
       - name: install
         run: |
-          npm i -g npm yarn
           yarn
           yarn build
       - name: Setup Pages

@@ -9,5 +9,5 @@ export default defineConfig({
       usePolling: true,
     },
   },
-  base: '/kingdomworks-home/',
+  // base: '/kingdomworks-home/',
 });

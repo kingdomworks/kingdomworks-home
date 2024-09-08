@@ -1,5 +1,5 @@
 import styled, { ThemeProvider } from 'styled-components';
-import { createHashRouter, RouterProvider } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import { appTheme, rootStyle } from './theme';
 import Landing from './landing/Landing';
@@ -13,26 +13,17 @@ const Wrapper = styled.div`
   padding-bottom: 10vh;
 `;
 
-const router = createHashRouter([
-  {
-    path: '/',
-    element: <Landing />,
-  },
-  {
-    path: '/apps',
-    element: <Apps />,
-  },
-  {
-    path: '/consulting',
-    element: <Consulting />,
-  },
-]);
-
 const App = () => (
   <Wrapper>
     <ThemeProvider theme={appTheme}>
-      <RouterProvider router={router} />
-      <Menu />
+      <HashRouter>
+        <Menu />
+        <Routes>
+          <Route index path="/*" element={<Landing />} />
+          <Route path="/apps" element={<Apps />} />
+          <Route path="/consulting" element={<Consulting />} />
+        </Routes>
+      </HashRouter>
     </ThemeProvider>
   </Wrapper>
 );

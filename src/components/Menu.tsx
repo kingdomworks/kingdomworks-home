@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Nav = styled.nav`
   position: fixed;
@@ -38,7 +39,7 @@ const Header = styled.h1`
 export const Menu = () => (
   <Nav>
     <Header>
-      <a href="/">We</a> build <a href="/apps">high quality software</a>, and <a href="/consulting">help others do the same</a>.
+      <Link to="/">We</Link> build <Link to="/apps">high quality software</Link>, and <Link to="/consulting">help others do the same</Link>.
     </Header>
   </Nav>
 );

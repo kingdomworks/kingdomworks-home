@@ -1,5 +1,5 @@
 import styled, { ThemeProvider } from 'styled-components';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 
 import { appTheme, rootStyle } from './theme';
 import Landing from './landing/Landing';
@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   padding-bottom: 10vh;
 `;
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Landing />,

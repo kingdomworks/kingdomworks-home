@@ -37,7 +37,9 @@ const Header = styled.h1`
 
 export const Menu = () => (
   <Nav>
-    <Header>We build high quality software, and help others do the same.</Header>
+    <Header>
+      <a href="/">We</a> build <a href="/apps">high quality software</a>, and <a href="/consulting">help others do the same</a>.
+    </Header>
   </Nav>
 );
 

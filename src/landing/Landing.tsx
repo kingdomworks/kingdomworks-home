@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import About from './About';
 import Jumbo from './Jumbo';
-import Contact from './Contact';
+import Contact from '../components/Contact';
 
 export const Landing: FC = () => (
   <>

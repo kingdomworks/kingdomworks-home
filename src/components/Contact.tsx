@@ -101,7 +101,7 @@ const Contact: FC = () => {
       <div className="inner">
         <div className="location">
           <h3>Location</h3>
-          <p>We are located in Millcreek, UT</p>
+          <p>We are located in Draper, UT</p>
         </div>
         <div className="email">
           <h3>bussiness inquiries</h3>

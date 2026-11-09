@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMS Opt-In | KingdomWorks LLC</title>
+    <link href="/legal.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header><a href="/">KingdomWorks</a></header>
+    <main>
+      <h1>KingdomWorks Agent Alerts: SMS Opt-In</h1>
+      <p>
+        KingdomWorks Agent Alerts is an SMS notification program from KingdomWorks LLC. It sends automated text messages
+        from KingdomWorks LLC's internal software agents, letting the subscriber know when a long-running task is
+        finished, when a task is blocked and needs a decision, or when an error occurs. This program is for internal use
+        by KingdomWorks LLC and its owner. It does not send marketing or promotional messages.
+      </p>
+
+      <form id="sms-opt-in-form">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required />
+
+        <label for="phone">Mobile phone number</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 555-5555" required />
+
+        <div class="consent">
+          <input type="checkbox" id="sms-consent" name="sms-consent" required />
+          <label for="sms-consent">
+            I agree to receive automated KingdomWorks Agent Alerts text messages from KingdomWorks LLC at the mobile
+            number provided. Message frequency varies (up to 10 messages per day). Message and data rates may apply.
+            Reply HELP for help or STOP to opt out at any time. Consent is not a condition of purchase.
+          </label>
+        </div>
+
+        <div class="consent">
+          <input type="checkbox" id="terms-consent" name="terms-consent" required />
+          <label for="terms-consent">
+            I have read and agree to the <a href="/terms/">Terms &amp; Conditions</a> and
+            <a href="/privacy/">Privacy Policy</a>.
+          </label>
+        </div>
+
+        <button type="submit">Subscribe to SMS alerts</button>
+      </form>
+
+      <div class="confirmation" id="confirmation" role="status">
+        <strong>You're subscribed to KingdomWorks Agent Alerts.</strong>
+        <p>
+          You'll receive a confirmation text: "KingdomWorks LLC: You're subscribed to KingdomWorks Agent Alerts. Msg
+          frequency varies, up to 10/day. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out."
+        </p>
+      </div>
+
+      <p>
+        Questions? Email <a href="mailto:hi@kingdomworks.io">hi@kingdomworks.io</a>. See our
+        <a href="/terms/">Terms &amp; Conditions</a> and <a href="/privacy/">Privacy Policy</a>.
+      </p>
+    </main>
+    <footer>&copy; KingdomWorks LLC. Draper, UT.</footer>
+    <script>
+      document.getElementById('sms-opt-in-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        event.target.style.display = 'none';
+        document.getElementById('confirmation').style.display = 'block';
+      });
+    </script>
+  </body>
+</html>
